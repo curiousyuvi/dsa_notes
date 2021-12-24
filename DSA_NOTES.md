@@ -16,4 +16,9 @@
 - #### Why we use `m = l+(r-l)/2` instead of `m = (l+r)/2` in Binary Search
   - To avoid overflow in case l and r are close to INT_MAX
 
+- #### Two sum (Two pointer appraoch) O(n) time and O(1) space [LeetCode Problem](https://leetcode.com/problems/two-sum/)
+  -  We first sort the array
+  -  then we take two integers as `i = 0` and `j = n-1`
+  -  then in a `while(i<j)` loop we check if `arr[i] + arr[j] < target` so we increase `i` , if `arr[i] + arr[j] > target` we decrease `j` and else we get our answer
+
 
