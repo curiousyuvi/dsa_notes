@@ -13,4 +13,7 @@
   - keep track of the `minOnLeft` and `maxProfit`
   - in each traversal if `arr[i]` is less than `minOnLeft` update it or else update `maxProfit` as `max(maxProfit,minOnLeft-arr[i])`
 
+- #### Why we use `m = l+(r-l)/2` instead of `m = (l+r)/2` in Binary Search
+  - To avoid overflow in case l and r are close to INT_MAX
+
 
