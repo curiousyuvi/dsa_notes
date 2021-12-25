@@ -22,7 +22,7 @@
   -  then in a `while(i<j)` loop we check if `arr[i] + arr[j] < target` so we increase `i` , if `arr[i] + arr[j] > target` we decrease `j` and else we get our answer
 
 - #### Merge two sorted arrays in O(1) space (Gap Method)
-  - First calculate `gap = ceil(n/2)`
+  - First calculate `gap = ceil(m+n/2)`
   - Take two elements from start seperated from gap and swap them if fomer is grater than later and kepp on traversing
   - then calculate gap again by `gap = ceil(gap/2)` and do the same steps
   - break the loop after `gap == 1`
