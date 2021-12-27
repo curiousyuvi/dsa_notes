@@ -1,6 +1,6 @@
 # DSA NOTES
 
-- #### Array Rotation in O(n) time and O(1) space
+- #### Array Rotation in O(n) time and O(1) space (Double Reverse Method)
   - reverse the partial arrays
   - then reverse the whole array
   - keep in mind to reduce `k(rotation factor)` if `k>=array.size()` 
@@ -26,6 +26,31 @@
   - Take two elements from start seperated from gap and swap them if fomer is grater than later and kepp on traversing
   - then calculate gap again by `gap = ceil(gap/2)` and do the same steps
   - break the loop after `gap == 1`
+
+- #### Move Zeroes (Two pointer approach)[LeetCode Problem](https://leetcode.com/problems/move-zeroes/) 
+  - We take keep track of index of zero element from start
+  - We traverse the array and if `arr[i]!=0`, we swap it with `arr[j]` and do `j++` but if `arr[i]==0` we just `continue`
+  - Code Snippet :
+  ```c++
+  
+  void moveZeroes(vector<int>& nums) {
+        
+        int n=nums.size(),j=0;
+                
+        
+        for(int i=0;i<n;i++)
+        {
+          if(nums[i]!=0 && nums[j]==0){
+              swap(nums[i],nums[j]);
+          }
+            
+            if(nums[j]!=0)
+                j++;
+            
+        }
+        
+    }
+  ```
   
 
 
