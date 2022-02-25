@@ -51,6 +51,64 @@
         
     }
   ```
+- #### Find first and last occurence of an integer in a sorted array in O(log n) time.
+  ```c++
   
+  int binSearch(vector<int>& nums, int target,int searchType){
+        int l=0,r=nums.size()-1,m,best=-1;
+        
+        
+        
+        
+        while(l<=r){
+            m=l+(r-l)/2;
+            if(nums[m]==target){
+                best=m;
+                if(searchType==-1)
+                   {r=m-1;}
+                else if(searchType==1)
+                    {l=m+1;}
+                else
+                    break;
+                
+            }
+            else if(nums[m]<target)
+            l=m+1;
+            else if(nums[m]>target){
+                r=m-1;
+            }
+            
+        }
+        
+        
+        
+        
+        return best;
+    }
+    
+    vector<int> searchRange(vector<int>& nums, int target) {
+        
+        
+        if(nums.size()==1){
+            if(target==nums[0]){
+                vector<int> ans={0,0};
+                return ans;
+            }
+        }
+        int a=-1,b=-1;
+        
+        
+        
+        if(binSearch(nums,target,0)!=-1){
+            a=binSearch(nums,target,-1);
+            b=binSearch(nums,target,1);
+            
+        }
+        
+        vector<int> ans={a,b};
+            return ans;
+    }
+    
+    ```
 
 
