@@ -165,3 +165,6 @@
        return ans;
     }
    ```
+
+- Check if `n` is part of Fibonacci Sequence
+  - if `(5*n<sup>2</sup> - 4)` or `(5*n<sup>2</sup> + 4)` is a perfect square
