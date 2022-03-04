@@ -111,4 +111,57 @@
     
     ```
 
-
+- Book allocation [problem](https://www.codingninjas.com/codestudio/problems/allocate-books_1090540) | Painter's partition [problem](https://www.codingninjas.com/codestudio/problems/painter-s-partition-problem_1089557) (using Binary Search O(n log n))
+  - code snippet -
+   ```c++
+   bool isPossibleAnswer(int mid,vector<int>& arr,int n,int m){
+    int i=0;
+   while(m--){
+       int sum=0;
+       while(i<n){
+           if((sum+arr[i])<=mid)
+           {
+               sum+=arr[i];
+           }
+           else
+           break;
+           i++;
+       }
+   }
+    if(i<=n-1){
+        return false;
+    }
+    
+    return true;
+    
+   }
+  int allocateBooks(vector<int> arr, int n, int m) {
+    
+      if(n<m)
+          return -1;
+        
+        int sum=0;
+        for(int i=0;i<n;i++){
+            sum+=arr[i];
+        }
+        
+        int min=0,max=sum,mid,ans=0;
+    
+        
+        
+        while(min<=max){
+            mid=min+(max-min)/2;
+            
+            if(isPossibleAnswer(mid,arr,n,m))
+                {
+                   max=mid-1;
+                   ans=mid;
+                }
+            else
+                min=mid+1;
+            
+        }
+    
+       return ans;
+    }
+   ```
