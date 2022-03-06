@@ -168,3 +168,8 @@
 
 - Check if `n` is part of Fibonacci Sequence
   - if `(5*n<sup>2</sup> - 4)` or `(5*n<sup>2</sup> + 4)` is a perfect square
+
+- **Sorting Algorithms**
+  - **Selection Sort** :
+  In selection sort we just need to loop `arr.size()-1` times and each time we take the minimum element to its right place.
+  
