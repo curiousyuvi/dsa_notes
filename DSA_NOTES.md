@@ -173,3 +173,4 @@
   - **Selection Sort** :
   In selection sort we just need to loop `arr.size()-1` times and each time we take the minimum element to its right place.
   
+- **Stable vs Unstable sort** - In *stable sort* the order of elements with same value is not changed i.e. `i < j and A[i] = A[j] and m < n` while in *unstable     sort* the order is not preserved.
