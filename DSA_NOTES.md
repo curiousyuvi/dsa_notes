@@ -170,7 +170,10 @@
   - if `(5*n<sup>2</sup> - 4)` or `(5*n<sup>2</sup> + 4)` is a perfect square
 
 - **Sorting Algorithms**
-  - **Selection Sort** :
+  - **Selection Sort** O(n<sup>2</sup>) :
   In selection sort we just need to loop `arr.size()-1` times and each time we take the minimum element to its right place.
+  
+  - **Bubble Sort** O(n<sup>2</sup>) :
+  In bubble sort we lopp `n-1` times ande each time we compare all pairs of elements and keep on swapping them if they are in incorrect order, thus in each         traversal we take the maximum element to its right position.
   
 - **Stable vs Unstable sort** - In *stable sort* the order of elements with same value is not changed i.e. `i < j and A[i] = A[j] and m < n` while in *unstable     sort* the order is not preserved.
