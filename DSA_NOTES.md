@@ -167,7 +167,7 @@
    ```
 
 - Check if `n` is part of Fibonacci Sequence
-  - if `(5*n<sup>2</sup> - 4)` or `(5*n<sup>2</sup> + 4)` is a perfect square
+  - if **(5n<sup>2</sup> - 4)** or **(5n<sup>2</sup> + 4)** is a perfect square
 
 - **Stable vs Unstable sort** - In *stable sort* the order of elements with same value is not changed i.e. `i < j and A[i] = A[j] and m < n` while in *unstable     sort* the order is not preserved.
 
