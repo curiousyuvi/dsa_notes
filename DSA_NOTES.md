@@ -169,11 +169,16 @@
 - Check if `n` is part of Fibonacci Sequence
   - if `(5*n<sup>2</sup> - 4)` or `(5*n<sup>2</sup> + 4)` is a perfect square
 
-- **Sorting Algorithms**
-  - **Selection Sort** O(n<sup>2</sup>) :
-  In selection sort we just need to loop `arr.size()-1` times and each time we take the minimum element to its right place.
-  
-  - **Bubble Sort** O(n<sup>2</sup>) :
-  In bubble sort we lopp `n-1` times ande each time we compare all pairs of elements and keep on swapping them if they are in incorrect order, thus in each         traversal we take the maximum element to its right position.
-  
 - **Stable vs Unstable sort** - In *stable sort* the order of elements with same value is not changed i.e. `i < j and A[i] = A[j] and m < n` while in *unstable     sort* the order is not preserved.
+
+- **Sorting Algorithms**
+  - **Selection Sort** O(n<sup>2</sup>) (unstable) : <br>
+  In selection sort we have `n-1` rounds and in each round we take the minimum element to its right place, and eventually in every round we get sorted array part   from the start.
+  
+  - **Bubble Sort** O(n<sup>2</sup>) (stable) : <br>
+  In bubble sort we have `n-1` rounds ande in each round we traverse the array and keep on checking two adjacent elemts and swap them if they are in wrong order,   thus in each traversal we take the maximum element to its right position, and eventually in every round we get sorted array part from the end.
+  
+  - **Insertion Sort** O(n<sup>2</sup>) (stable) : <br>
+  We initially start with sorted part with only 1 element i.e. `arr[0]` and start traversing   from `i=1` and every time pick `arr[i]` take it to is its right       position in the sorted part of array by shifting elements.
+  
+
