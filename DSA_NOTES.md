@@ -181,4 +181,5 @@
   - **Insertion Sort** O(n<sup>2</sup>) (stable) : <br>
   We initially start with sorted part with only 1 element i.e. `arr[0]` and start traversing   from `i=1` and every time pick `arr[i]` take it to is its right       position in the sorted part of array by shifting elements.
   
-- Char arrays are terminated with `'\0'` called the `null charachter`
+- Char arrays are terminated with `'\0'` called the `null charachter`.
+- To input a sentence in c++ we use `cin.getline(str,len);`.
