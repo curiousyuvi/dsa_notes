@@ -183,3 +183,44 @@
   
 - Char arrays are terminated with `'\0'` called the `null charachter`.
 - To input a sentence in c++ we use `cin.getline(str,len);`.
+- Spiral printing a 2d array
+  - **Approach:** We print startingRow, endingColumn, endingRow, startingColumn in order and keep on increaing or decreading them after printing.
+  - **Code:** 
+  ```c++
+  vector<int> spiralOrder(vector<vector<int>>& matrix) {
+        
+        vector<int> ans;
+        int totalSize=(matrix[0].size())*(matrix.size());
+        cout<<totalSize<<endl;
+        
+        int sr=0,ec=matrix[0].size()-1,er=matrix.size()-1,sc=0;
+        
+        while( (ans.size()<totalSize) ){
+            for(int i=sc;ans.size()<totalSize && i<=ec;i++){
+                ans.push_back(matrix[sr][i]);
+            }
+            sr++;
+            
+            for(int i=sr;ans.size()<totalSize && i<=er;i++){
+                ans.push_back(matrix[i][ec]);
+                
+            }
+            ec--;
+            
+            for(int i=ec;ans.size()<totalSize && i>=sc;i--){
+                ans.push_back(matrix[er][i]);
+                
+            }
+            er--;
+            
+            for(int i=er;ans.size()<totalSize && i>=sr;i--){
+                ans.push_back(matrix[i][sc]);
+                
+            }
+            sc++;
+        }
+        
+        return ans;
+        
+    }
+  ```
