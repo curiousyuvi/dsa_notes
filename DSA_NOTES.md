@@ -224,3 +224,5 @@
         
     }
   ```
+- **Binary search in 2d array (m x n) :** <br>
+  **Appraoch :** Consider it a 1d array with `startIdx=0` and `endIndex=(m x n) - 1` and we calculate mid every time and do basic binary search but to get the element we write `arr[mid/n][mid%n]`.
