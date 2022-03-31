@@ -178,8 +178,11 @@
   - **Bubble Sort** O(n<sup>2</sup>) (stable) : <br>
   In bubble sort we have `n-1` rounds ande in each round we traverse the array and keep on checking two adjacent elemts and swap them if they are in wrong order,   thus in each traversal we take the maximum element to its right position, and eventually in every round we get sorted array part from the end.
   
-  - **Insertion Sort** O(n<sup>2</sup>) (stable) : <br> [gist](https://gist.github.com/curiousyuvi/0c4b281dacbdf3317debbc0a92c99f65)
+  - **Insertion Sort** O(n<sup>2</sup>) (stable) : [**CODE**](https://gist.github.com/curiousyuvi/0c4b281dacbdf3317debbc0a92c99f65) <br>
   We initially start with sorted part with only 1 element i.e. `arr[0]` and start traversing   from `i=1` and every time pick `arr[i]` take it to is its right       position in the sorted part of array by shifting elements.
+  
+ - **Merge Sort** O(n<sup>2</sup>) (stable) : [**CODE**](https://gist.github.com/curiousyuvi/15b0126112071bdc7b4f53ffe2de1bb8) <br>
+ Recursively merge two sorted arrays.
   
 - Char arrays are terminated with `'\0'` called the `null charachter`.
 - To input a sentence in c++ we use `cin.getline(str,len);`.
