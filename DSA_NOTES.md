@@ -246,3 +246,47 @@
       }
     }
   ```
+  
+- **Segmented Sieve** (for finding primes in L..R where `1<=R<=10e12` and `(R-L)<=10e6`) T.C. => `O((R-L+1)log(R) + sqrt(R))` - <br>
+  ```c++
+  void sieve(char arr[], ll n)
+  {
+    for (ll i = 0; i <= n; i++)
+        arr[i] = true;
+    arr[0] = false;
+    arr[1] = false;
+
+    for (ll i = 2; i * i <= n; i++)
+    {
+        if (arr[i])
+        {
+            for (ll j = i * i; j <= n; j += i)
+            {
+                arr[j] = false;
+            }
+        }
+    }
+  }
+
+  void segmentedSieve(char arr[], ll l, ll r)
+  {
+    ll rsqrt = sqrt(r);
+
+    char sieveArr[rsqrt + 1];
+    sieve(sieveArr, rsqrt);
+
+    for (ll i = 2; i <= rsqrt; i++)
+    {
+        if (sieveArr[i])
+        {
+            ll firstMultiple = (((l) / i) + 1) * i;
+            if (l % i == 0)
+                firstMultiple -= i;
+
+            for (ll j = max(firstMultiple, i * i) - l; j <= (r - l); j++)
+                if (!((j + l) % i))
+                    arr[j] = false;
+        }
+    }
+  }
+  ```
