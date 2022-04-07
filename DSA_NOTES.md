@@ -290,3 +290,6 @@
     }
   }
   ```
+- **Heap** - <br>
+  - Max Heap using STL => `priority_queue<int> max_heap;`
+  - Min Heap using STL => `priority_queue<int,vector<int>,greater<int>> min_heap;`
