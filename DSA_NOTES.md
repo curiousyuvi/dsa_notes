@@ -303,3 +303,5 @@
     return gcd(b % a, a);
   }
   ```
+- **GCD and LCM -** <br>
+  - `GCD(a,b) * LCM(a,b) = a * b`
