@@ -293,3 +293,13 @@
 - **Heap** - <br>
   - Max Heap using STL => `priority_queue<int> max_heap;`
   - Min Heap using STL => `priority_queue<int,vector<int>,greater<int>> min_heap;`
+
+- **GCD - Euclidean Algorithm** - <br>
+  ```c++
+  int gcd(int a, int b)
+  {
+    if (a == 0)
+        return b;
+    return gcd(b % a, a);
+  }
+  ```
