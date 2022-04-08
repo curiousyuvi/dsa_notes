@@ -322,3 +322,8 @@
     return result;
   }
   ```
+  
+- **Catalan Numbers** - <br>
+  - `[ 1 , 1 , 2 , 5 , 14 , 42, ....]`
+  - `[ C0, C1, C2, C3, C4, C5, ....]`
+  -  `Cn = (i=0 to i=n-1) Σ (Ci x C(i-1))`
