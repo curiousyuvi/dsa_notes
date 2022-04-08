@@ -305,3 +305,20 @@
   ```
 - **GCD and LCM -** <br>
   - `GCD(a,b) * LCM(a,b) = a * b`
+
+- **Fast Modular Exponentiation** T.C. => O(logn)- <br>
+  ```c++
+  int mpow(int base, int exp, int mod)
+  {
+    base %= mod;
+    int result = 1;
+    while (exp > 0)
+    {
+        if (exp & 1)
+            result = ((long long)result * base) % mod;
+        base = ((long long)base * base) % mod;
+        exp >>= 1;
+    }
+    return result;
+  }
+  ```
