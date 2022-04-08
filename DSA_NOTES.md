@@ -327,3 +327,28 @@
   - `[ 1 , 1 , 2 , 5 , 14 , 42, ....]`
   - `[ C0, C1, C2, C3, C4, C5, ....]`
   -  `Cn = (i=0 to i=n-1) Σ (Ci x C(i-1))`
+  -  DP code to get nth Catalan Number :
+  ```c++
+  void solve()
+  {
+    int i, j, n, m;
+    cin >> n;
+    int arr[n + 1] = {0};
+    arr[0] = 1;
+    arr[1] = 1;
+
+    for (int i = 2; i <= n; i++)
+    {
+        int j = 0, k = i - 1, ans = 0;
+        while (j < i && k >= 0)
+        {
+            ans += arr[j] * arr[k];
+            j++;
+            k--;
+        }
+        arr[i] = ans;
+    }
+
+    pi(arr[n]);
+  }
+  ```
