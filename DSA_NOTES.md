@@ -349,6 +349,6 @@
         arr[i] = ans;
     }
 
-    pi(arr[n]);
+    cout<<arr[n]<<endl;
   }
   ```
